@@ -1,1 +1,10 @@
-header.banner{background-color:#fff}
+header.banner{
+  background-color: $header-bg;
+  .logo-brand{
+    img {
+      max-width: 100%;
+      @include scut-padding(26px n);
+      height: auto;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <header class="banner">
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-9 col-md-2 text-center">
+		<div class="row header-row">
+			<div class="col-xs-9 col-md-2 text-center logo-brand">
 				<a class="brand" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
 					<?php echo wp_get_attachment_image(3352,"full");?>
 				</a>
