@@ -1,0 +1,69 @@
+//fonts
+@include font-face($font_futurabk, $url_futurabk_bold, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_futurabk, $url_futurabk, normal, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_futurabk, $url_futurabk_italic, normal, italic, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_hppsg, $url_hppsg, normal, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_futurahv, $url_futurahv, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_futuralt, $url_futuralt, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_futuramd, $url_futuramd, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+
+//@extend-elements
+//original selectors
+//html, body, form, fieldset, table, tr, td, img
+%extend_1 {
+  margin: 0;
+  padding: 0;
+  font: 100%/150% $font-sans;
+}
+
+//original selectors
+//input, button, select, textarea, optgroup, option
+%extend_2 {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+html {
+  @extend %extend_1;
+}
+body {
+  @extend %extend_1;
+}
+form {
+  @extend %extend_1;
+}
+fieldset {
+  @extend %extend_1;
+}
+table {
+  @extend %extend_1;
+}
+tr {
+  @extend %extend_1;
+}
+td {
+  @extend %extend_1;
+}
+img {
+  @extend %extend_1;
+}
+input {
+  @extend %extend_2;
+}
+button {
+  @extend %extend_2;
+}
+select {
+  @extend %extend_2;
+}
+textarea {
+  @extend %extend_2;
+}
+optgroup {
+  @extend %extend_2;
+}
+option {
+  @extend %extend_2;
+}

@@ -1,9 +1,43 @@
 // Glyphicons font path
 $icon-font-path:        "../fonts/";
-
 // Grid settings
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:         #000000;
+$http_path: "http://urbangallery.local/wp-content/themes/ug2015/assets/";
+$http_images_path: "images/";
+
+@function image-url($relative-url){
+  $tmpUrl: $http_path + $http_images_path + $relative-url;
+  @return url($tmpUrl);
+}
+
+//fonts
+$futura-font-path:      "../fonts/";
+$font_futurabk: Futura Bk;
+$font_hppsg: HP PSG;
+$font_futurahv: Futura Hv;
+$font_futuralt: Futura Lt;
+$font_futuramd: Futura Md;
+
+//urls
+$url_futurabk_bold: "hinted-FuturaBk-Bold";
+$url_hppsg: "hinted-HPPSG";
+$url_futurabk: "hinted-FuturaBk";
+$url_futurahv: "hinted-FuturaHv";
+$url_futuralt: "hinted-FuturaLt";
+$url_futurabk_italic: "hinted-FuturaBk-Italic";
+$url_futuramd: "hinted-FuturaMd";
+
+$font-sans: $font_futurabk, Helvetica, Arial, sans-serif;
+$font-serif: Georgia, 'Times New Roman', serif;
+$font-mono: 'Lucida Console', Monaco, monospace;
+$base-vertical-unit: 6px;
+$base-line-multi: 4;
+$base-font-size: 16px;
+$ms-ratio: 1.414;
+$paragraph-indent: true;
+$paragraph-justify: true;
+$load-typesetted: true;

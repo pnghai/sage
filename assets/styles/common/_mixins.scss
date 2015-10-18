@@ -1,0 +1,4 @@
+@function font-url($relative-url){
+  $tmpUrl: $futura-font-path + $relative-url;
+  @return url($tmpUrl);
+}
