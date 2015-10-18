@@ -6,7 +6,10 @@ $sidebar-sm-columns:    4;
 
 // Colors
 $brand-primary: #000000;
+$header-bg: #fff;
 $gray-bg: #f3f3f3;
+$footer-bg: #666;
+$footer-text: #fff;
 $http_path: "http://urbangallery.local/wp-content/themes/ug2015/assets/";
 $http_images_path: "images/";
 
@@ -35,10 +38,10 @@ $url_futuramd: "hinted-FuturaMd";
 $font-sans: $font_futurabk, Helvetica, Arial, sans-serif;
 $font-serif: Georgia, 'Times New Roman', serif;
 $font-mono: 'Lucida Console', Monaco, monospace;
-$base-vertical-unit: 6px;
+$base-vertical-unit: 8px;
 $base-line-multi: 4;
-$base-font-size: 16px;
-$ms-ratio: 1.414;
+$base-font-size: 15px;
+$ms-ratio: 1.2;
 $paragraph-indent: true;
 $paragraph-justify: true;
 $load-typesetted: true;
