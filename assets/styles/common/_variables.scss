@@ -7,7 +7,10 @@ $sidebar-sm-columns:    4;
 // Colors
 $brand-primary: #000000;
 $header-bg: #fff;
-$gray-bg: #f3f3f3;
+$body-bg: #f3f3f3;
+$text-color:#000;
+$link-color: $brand-primary;
+$link-hover-color: lighten($link-color, 15%);
 $footer-bg: #666;
 $footer-text: #fff;
 $http_path: "http://urbangallery.local/wp-content/themes/ug2015/assets/";
@@ -45,4 +48,13 @@ $ms-ratio: 1.2111;
 $paragraph-indent: true;
 $paragraph-justify: true;
 $load-typesetted: true;
-$text-color:#000;
+
+//bootstrap config
+$btn-default-color: $footer-text;
+$btn-default-bg: #999;
+$btn-default-border: $btn-default-bg;
+$border-radius-base: 0;
+$border-radius-large: 4px;
+$border-radius-small: 2px;
+$input-border:$text-color;
+$input-border-focus: lighten($input-border,15%);
