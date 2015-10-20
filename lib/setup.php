@@ -107,10 +107,8 @@ function assets() {
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
 function my_enqueue($hook) {
-  if ( 'admin-ajax.php' != $hook ) {
-    return;
+  if (is_admin()) {
+    wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
   }
-
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
 }
-add_action( 'admin_enqueue_scripts', 'my_enqueue' );
+add_action( 'init', 'my_enqueue' );
