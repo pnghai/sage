@@ -107,8 +107,19 @@ function assets() {
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
 function my_enqueue() {
-  if (is_admin()) {
-    wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+  if ( defined('DOING_AJAX') && DOING_AJAX ) {
+    //wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+    wp_deregister_style('wpe-common');
+    wp_deregister_style('wr2x-admin-css');
+    remove_action('admin_init', array( 'SIS_Admin_Main', 'register_assets' ));
   }
 }
-add_action( 'init', 'my_enqueue' );
+
+add_action( 'init', __NAMESPACE__ . '\\my_enqueue',9999 );
+add_action( 'after_setup_theme',__NAMESPACE__ . '\\remove_gg_global_scripts', 9999 );
+
+function remove_gg_global_scripts() {
+  if ( defined('DOING_AJAX') && DOING_AJAX ){
+    remove_action('init', 'gg_global_scripts');
+  }
+}
