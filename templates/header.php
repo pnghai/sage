@@ -7,14 +7,11 @@
 				</a>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<?php
-				if (has_nav_menu('primary_navigation')) :
-					wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-				endif;
-				?>
-			</div>
-		</div>
+
 	</div>
+	<?php
+	if (has_nav_menu('primary_navigation')) :
+	wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+	endif;
+	?>
 </header>
