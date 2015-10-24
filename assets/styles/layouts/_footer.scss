@@ -1,13 +1,16 @@
-footer{
+footer {
   background-color:$footer-bg;
   color: $footer-text;
   @include scut-padding(53px 0 57px);
-  #sb_instagram{
+  #sb_instagram {
     padding-bottom:0!important;
   }
   .widget {
-	h3{
+	h3 {
 		text-transform: uppercase;
+	}
+	a {
+	color: $footer-text;
 	}
   }
 }
