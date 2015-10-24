@@ -3,7 +3,7 @@
 		<div class="row header-row">
 			<div class="col-xs-12 hidden-md hidden-lg text-center logo-brand">
 				<a class="brand" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
-					<?php echo wp_get_attachment_image(3352,"full");?>
+					<?php echo wp_get_attachment_image(3444,"full");?>
 				</a>
 			</div>
 		</div>
