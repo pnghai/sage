@@ -3,15 +3,20 @@
   <article <?php post_class(); ?>>
     <div class="row">
       <div class="col-md-4">
-        <header>
-          <h1 class="text-uppercase entry-title"><?php the_title(); ?></h1>
-          <?php
-          global $EM_Event, $post;
+        <header class="text-uppercase">
+          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <?php global $EM_Event, $post;
             $EM_Event = em_get_event($post->ID, 'post_id');
-          var_dump($EM_Event);
-            echo $EM_Event->output('<div class="datetime-range">#_EVENTDATES . #_EVENTTIMES</div><div class="location">#_LOCATIONNAME<br>#_LOCATIONFULLBR</div>');
-          //$EM_Event->output_single();
           ?>
+          <div class="datetime-range">
+            <?php echo $EM_Event->output("#_EVENTDATES . #_EVENTTIMES");?>
+          </div>
+          <div class="location-name">
+            <?php echo $EM_Event->output("#_LOCATIONNAME");?>
+          </div>
+          <div class="localtion-fullbr">
+            <?php echo $EM_Event->output("#_LOCATIONFULLBR");?>
+          </div>
         </header>
       </div>
       <div class="col-md-8">
