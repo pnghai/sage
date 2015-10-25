@@ -1,3 +1,4 @@
+<?php if (!(is_home())):?>
 <footer class="content-info">
   <div class="container">
     <div class="row">
@@ -17,3 +18,4 @@
     </div>
   </div>
 </footer>
+<?php endif;
