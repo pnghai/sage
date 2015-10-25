@@ -51,7 +51,7 @@
                   ?>
                   <div class="entry-artists">
                     <span class="entry-cats-list"><?php echo $categories; ?></span>
-                    <a class="entry-artist-link" href="<?php echo get_permalink(get_page_by_title($artists[0]->name));?>"><?php _e('&gt;&gt; VIEW ARTIST');?></a>
+                    <a class="entry-artist-link" href="<?php echo get_page_link(get_page_by_title($artists[0]->name)->ID);?>"><?php _e('&gt;&gt; VIEW ARTIST');?></a>
                   </div>
                 <?php endif; ?>
 
