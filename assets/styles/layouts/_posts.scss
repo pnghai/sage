@@ -1,0 +1,33 @@
+.single-post {
+  article {
+    background: #fff;
+    @include scut-padding(20px 30px);
+    .entry-title {
+      font-weight: normal;
+      margin-bottom: emRhythm(2, $ms-up1);
+      @include setType(3, $ms-up1);
+
+      @media (min-width: 56.25em) {
+        margin-bottom: emRhythm(2, $ms-up2);
+        @include setType(4, $ms-up2);
+      }
+    }
+    .feature-image img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      margin-bottom: 35px;
+    }
+    .comments {
+      h2 {
+        line-height: 1.4;
+      }
+      .comment-form-comment {
+        margin-top : 0;
+        label {
+          text-indent: 0;
+        }
+      }
+    }
+  }
+}

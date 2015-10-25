@@ -8,8 +8,8 @@
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }
-.page:not(.home) {
-  .main {
+body:not(.home) {
+  .content {
     @include scut-padding(30px n);
   }
 }

@@ -2,7 +2,6 @@
 @include font-face($font_futurabk, $url_futurabk_bold, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futurabk, $url_futurabk, normal, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futurabk, $url_futurabk_italic, normal, italic, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
-@include font-face($font_hppsg, $url_hppsg, normal, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futurahv, $url_futurahv, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futuralt, $url_futuralt, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futuramd, $url_futuramd, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
