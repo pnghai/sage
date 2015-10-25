@@ -13,5 +13,4 @@
  */
 global $EM_Event;
 /* @var $EM_Event EM_Event */
-//echo $EM_Event->output_single();
-?>
+echo $EM_Event->output("#_EVENTNOTES");
