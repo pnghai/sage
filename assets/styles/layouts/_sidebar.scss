@@ -1,10 +1,10 @@
 .sidebar {
   .widget_ultimate_posts {
-    .entry-title{
+    .entry-title {
       font-weight: normal;
-      margin-bottom: emRhythm(3);
-      @include setType(1);
-      a:hover{
+      margin-bottom: emRhythm(1);
+      @include setType(3);
+      a:hover {
         font-style: italic;
         text-decoration: none;
       }
