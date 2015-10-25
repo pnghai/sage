@@ -6,11 +6,14 @@ footer {
     padding-bottom:0!important;
   }
   .widget {
-	h3 {
-		text-transform: uppercase;
+    h3 {
+      text-transform: uppercase;
 	}
 	a {
-	color: $footer-text;
+	  color: $footer-text;
 	}
+    .textwidget div , address {
+      line-height: 1.8
+    }
   }
 }
