@@ -12,24 +12,34 @@
   }
   .upw-posts-slider{
     background-color: #fff;
-    @include scut-padding(18px);
+    @include scut-padding(18px 19px 23px);
+    .entry-title{
+      margin-top:emRhythm(2);
+      @include setType(3);
+    }
+    .entry-artists{
+      .entry-artist-link{
+        color:#cc9999;
+        font-style: italic;
+      }
+    }
     .carousel-control {
       background-image:none;
       color:#000;
       top: 50%;
       margin-top:-1.5em;
       bottom: initial;
-      @include text-shadow(none);
-      @include opacity(.8);
+      text-shadow:none;
+      @include opacity(.65);
       &:hover{
         @include opacity(1);
       }
-      .fa{font-size:3em}
+      i {font-size: 2em}
       &.left{
         left:-1em;
       }
       &.right{
-        right:-1em;
+        right:-0.85em;
       }
     }
   }

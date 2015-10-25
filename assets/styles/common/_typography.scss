@@ -4,7 +4,7 @@
 @include font-face($font_futurabk, $url_futurabk_italic, normal, italic, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futurahv, $url_futurahv, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
 @include font-face($font_futuralt, $url_futuralt, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
-@include font-face($font_futuramd, $url_futuramd, bold, normal, $asset-pipeline: true, $file-formats: eot woff2 woff ttf);
+@include font-face($font_thin_arrow, $url_thin_arrow, normal, normal, $asset-pipeline: true, $file-formats: eot woff ttf svg);
 
 //@extend-elements
 //original selectors
@@ -66,3 +66,41 @@ optgroup {
 option {
   @extend %extend_2;
 }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "Thin Arrow";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-left-open-big:before { content: '\e800'; } /* '?' */
+.icon-right-open-big:before { content: '\e801'; } /* '?' */

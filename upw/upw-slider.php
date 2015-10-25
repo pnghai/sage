@@ -46,11 +46,12 @@
 
                 <?php
                 $categories = get_the_term_list($post->ID, 'category', '', ', ');
+                $artists = get_the_terms($post->ID,'category');
                 if ($instance['show_cats'] && $categories) :
                   ?>
                   <div class="entry-artists">
                     <span class="entry-cats-list"><?php echo $categories; ?></span>
-                    <a class="entry-artist" href="#"><?php _e('&gt;&gt; VIEW ARTIST');?></a>
+                    <a class="entry-artist-link" href="<?php echo get_permalink(get_page_by_title($artists[0]->name));?>"><?php _e('&gt;&gt; VIEW ARTIST');?></a>
                   </div>
                 <?php endif; ?>
 
@@ -63,11 +64,11 @@
 
       <!-- Controls -->
       <a class="left carousel-control" href="#upw-carousel" role="button" data-slide="prev">
-        <i class="fa fa-angle-left fa-3" aria-hidden="true"></i>
+        <i class="icon-left-open-big" aria-hidden="true"></i>
         <span class="sr-only"><?php _e('Previous','ug-2015');?></span>
       </a>
       <a class="right carousel-control" href="#upw-carousel" role="button" data-slide="next">
-        <i class="fa fa-angle-right fa-3" aria-hidden="true"></i>
+        <i class="icon-right-open-big" aria-hidden="true"></i>
         <span class="sr-only"><?php _e('Next','ug-2015');?></span>
       </a>
     </div>
