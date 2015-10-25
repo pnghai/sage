@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <h3 class="text-uppercase entry-categories"><?php _e('Category:','ug-2015'); the_category(', ');?></h3>
+  <h3 class="text-uppercase entry-categories"><?php _e('Category','ug-2015');?> : <? the_category(', ');?></h3>
   <article <?php post_class(); ?>>
     <header>
       <time class="h5 updated text-uppercase entry-post-date" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>

@@ -1,0 +1,13 @@
+.sidebar {
+  .widget_ultimate_posts {
+    .entry-title{
+      font-weight: normal;
+      margin-bottom: emRhythm(3);
+      @include setType(1);
+      a:hover{
+        font-style: italic;
+        text-decoration: none;
+      }
+    }
+  }
+}
