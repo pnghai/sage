@@ -1,4 +1,4 @@
-<?php if (!(is_home())):?>
+<?php if (!(is_front_page())):?>
 <footer class="content-info">
   <div class="container">
     <div class="row">
