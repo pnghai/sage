@@ -18,6 +18,9 @@
             <?php echo $EM_Event->output("#_LOCATIONFULLBR");?>
           </div>
         </header>
+        <section class="event-widgets">
+          <?php dynamic_sidebar('sidebar-event-single'); ?>
+        </section>
       </div>
       <div class="col-md-8">
           <div class="entry-content">
