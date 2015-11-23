@@ -1,15 +1,11 @@
-.content-info {
-  color: $footer-text;
-  @include scut-padding(53px 0 57px);
+footer {
+  @include scut-padding(28px 0);
   #sb_instagram {
     padding-bottom:0!important;
   }
   .widget {
     h3 {
       text-transform: uppercase;
-	}
-	a {
-	  color: $footer-text;
 	}
     .textwidget div , address {
       line-height: 1.8
