@@ -8,7 +8,7 @@
 					wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
 				endif;
 				?>
-				<?php do_shortcode("[wp_google_searchbox]";) ?>
+				<?php do_shortcode("[wp_google_searchbox]"); ?>
 				<a class="brand" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
 					<?php echo wp_get_attachment_image(3444,"full");?>
 				</a>
