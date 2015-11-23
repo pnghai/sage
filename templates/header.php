@@ -8,7 +8,7 @@
 				endif;
 				?>
 			</div>
-			<div class="col-xs-12 text-center searchbar">
+			<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center searchbar">
 				<?php echo do_shortcode("[wp_google_searchbox]"); ?>
 			</div>
 			<div class="col-xs-12 text-center logo-brand">
