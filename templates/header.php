@@ -9,7 +9,7 @@
 				?>
 			</div>
 			<div class="col-xs-12 text-center searchbar">
-				<?php do_shortcode("[wp_google_searchbox]"); ?>
+				<?php echo do_shortcode("[wp_google_searchbox]"); ?>
 			</div>
 			<div class="col-xs-12 text-center logo-brand">
 				<a class="brand" href="<?= esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>">
