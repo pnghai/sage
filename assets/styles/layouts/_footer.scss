@@ -1,5 +1,8 @@
 footer {
-  @include scut-padding(28px 0);
+  .container{
+    border-top:1px solid #000;
+    @include scut-padding(28px 0);
+  }
   #sb_instagram {
     padding-bottom:0!important;
   }
