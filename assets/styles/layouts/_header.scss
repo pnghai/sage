@@ -1,8 +1,9 @@
 header.banner{
+  .searchbar{@include scut-padding(10px n);}
   .logo-brand{
     img {
       max-width: 100%;
-      @include scut-padding(26px n);
+      @include scut-padding(10px n);
       height: auto;
     }
   }
