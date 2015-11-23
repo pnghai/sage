@@ -46,6 +46,9 @@ function setup() {
 
   // Custom stylesheet for visual editor
   add_editor_style(Assets\asset_path('styles/main.css'));
+
+  //Add woocommerce support
+  add_theme_support( 'woocommerce' );
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
