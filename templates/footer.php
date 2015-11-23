@@ -1,4 +1,3 @@
-<?php if (!(is_front_page())):?>
 <footer class="content-info">
   <div class="container">
     <div class="row">
@@ -18,4 +17,3 @@
     </div>
   </div>
 </footer>
-<?php endif;

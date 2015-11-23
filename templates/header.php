@@ -1,4 +1,3 @@
-<?php if (!(is_front_page())): ?>
 <header class="banner">
 	<div class="container">
 		<div class="row header-row">
@@ -16,4 +15,3 @@
 	endif;
 	?>
 </header>
-<?php endif;
