@@ -4,6 +4,10 @@
   .sidebar-primary & {
     @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
   }
+  .menu-item.active {
+    font-weight:bold;
+  }
+  p{margin-bottom:51px}
 }
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
