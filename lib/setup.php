@@ -98,6 +98,8 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
+    is_page_template('template-custom-page-header.php'),
+    is_page_template('template-no-header-nor-footer.php'),
     is_singular('event')
   ]);
 
