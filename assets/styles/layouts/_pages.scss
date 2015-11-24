@@ -1,3 +1,14 @@
 .page-child{
   .page-header{display:none}
 }
+.artist-mini-title{
+  font-size:14px
+}
+.past-event-item{
+  cursor: pointer;
+  > div{float:left}
+  .event-thumb{width:100px;margin-right:20px}
+  .event-title{width:140px;margin-right:30px}
+  .event-date{width:135px;margin-right:20px}
+  .event-address{width:120px}
+}
