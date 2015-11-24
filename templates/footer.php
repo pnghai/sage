@@ -15,5 +15,12 @@
         <?php dynamic_sidebar('sidebar-footer4'); ?>
       </div>
     </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="copyright-text">
+          Copyright © <?php echo date("Y");?> urbanArt Gallery; All rights reserved.
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
