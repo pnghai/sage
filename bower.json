@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.5",
-    "bourbon": "4.2.6",
-    "Scut": "scut#~1.2.1",
+    "bootstrap-sass": "*",
+    "bourbon": "*",
+    "Scut": "scut#*",
     "typesettings": "~3.0.1"
   },
   "overrides": {
