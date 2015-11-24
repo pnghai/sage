@@ -13,5 +13,13 @@ footer {
     .textwidget div , address {
       line-height: 1.8
     }
+    .menu-footer-menu {
+      @include scut-margin(n n 0 0);
+      padding-left:0;
+      li {
+        display: block;
+        text-transform: uppercase;
+      }
+    }
   }
 }
