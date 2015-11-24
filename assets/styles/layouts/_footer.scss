@@ -1,4 +1,4 @@
-footer {
+footer.content-info{
   .container{
     border-top:1px solid #000;
     @include scut-padding(28px 0);
@@ -13,7 +13,7 @@ footer {
     .textwidget div , address {
       line-height: 1.8
     }
-    .menu-footer-menu {
+    ul.menu {
       @include scut-margin(n n 0 0);
       padding-left:0;
       li {
