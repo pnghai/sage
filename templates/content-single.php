@@ -13,9 +13,12 @@
             <?php $categories = get_the_category();
             if ( ! empty( $categories ) ) {
               foreach( $categories as $category ) {
+                $artist_link = get_field("artist_page", $category);
+                if ($artist_link):
                 ?>
-                <li><a href="<?php the_field("artist_page", $category); ?>"><?php _e("Artist Info", "sage"); ?></a>
+                <li><a href="<?php echo $artist_link; ?>"><?php _e("Artist Info", "sage"); ?></a>
                 </li><?php
+                endif;
               }
             }
             ?>
