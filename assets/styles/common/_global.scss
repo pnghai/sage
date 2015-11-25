@@ -1,3 +1,11 @@
 .content-wrapper{margin-top:64px;padding-left:0}
 .page-header{margin:0;padding-bottom: 0}
-.vc_grid p{margin-bottom: 0;display:none}
+p:empty{
+  margin-bottom: 0;
+  display:none
+}
+.vc_grid{
+  .vc_grid-item{
+    float:left
+  }
+}
