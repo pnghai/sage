@@ -14,7 +14,7 @@
 							<div class="right-col pull-right">
 								<a class="su-post-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail("medium"); ?></a>
 								<br>
-								<a href="<?php the_permalink();?>">Permalink</a>
+								<a class="permalink-small" href="<?php the_permalink();?>">Permalink</a>
 							</div>
 						<?php endif; ?>
 						<h2 class="su-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

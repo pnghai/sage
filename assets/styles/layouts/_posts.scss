@@ -1,7 +1,13 @@
 .su-news-loop{
   .su-post{
+    width: auto;
+    overflow: hidden;
     .su-post-title{
       line-height:1.2;
+    }
+    .su-post-meta {
+      line-height: 3;
+      color: #E81A4D;
     }
     .right-col{
       text-align:right;
@@ -10,8 +16,6 @@
         margin-bottom:10px;
       }
     }
-    width: auto;
-    overflow: hidden;
     .view-more{
       margin-top:25px;
       font-weight: bold;
