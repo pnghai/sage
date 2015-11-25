@@ -20,3 +20,11 @@
     line-height:2
   }
 }
+.woocommerce ul#shipping_method li{text-indent:0}
+body.woocommerce{
+  backgroun-image: url(http://www.gagosian.com/__data/403b124d15785092fb28ee9a5e40429f.jpg);
+  background-position: 50% 0;
+  .content-wrapper{
+    background:#fff;
+  }
+}
