@@ -1,13 +1,20 @@
 .su-news-loop{
-  .right-col{
-    text-align:right;
-    @include scut-margin(0 0 25px 35px);
-  }
   .su-post{
+    .su-post-title{
+      line-height:1.2;
+    }
+    .right-col{
+      text-align:right;
+      @include scut-margin(0 0 0 35px);
+      a.su-post-thumbnail img{
+        margin-bottom:10px;
+      }
+    }
     width: auto;
     overflow: hidden;
     .view-more{
-      margin-top:50px;
+      margin-top:25px;
+      font-weight: bold;
     }
   }
 }
