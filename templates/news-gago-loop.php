@@ -17,15 +17,13 @@
 								<a href="<?php the_permalink();?>">Permalink</a>
 							</div>
 						<?php endif; ?>
-						<div class="left-col">
-							<h2 class="su-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<div class="su-post-subtitle"><?php the_field("subtitle");?></div>
-							<div class="su-post-meta"><?php the_time( get_option( 'date_format' ) ); ?></div>
-							<div class="su-post-excerpt">
-								<?php the_excerpt(); ?>
-							</div>
-							<div class="view-more"><a href="<?php the_permalink();?>"><i class="fa fa-chevron-circle-right"></i> VIEW MORE</a></div>
+						<h2 class="su-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="su-post-subtitle"><?php the_field("subtitle");?></div>
+						<div class="su-post-meta"><?php the_time( get_option( 'date_format' ) ); ?></div>
+						<div class="su-post-excerpt">
+							<?php the_excerpt(); ?>
 						</div>
+						<div class="view-more"><a href="<?php the_permalink();?>"><i class="fa fa-chevron-circle-right"></i> VIEW MORE</a></div>
 					</div>
 					<hr>
 					<?php
