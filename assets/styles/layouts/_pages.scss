@@ -6,9 +6,12 @@
 }
 .past-event-item{
   cursor: pointer;
+  margin-bottom:15px;
   > div{float:left}
   .event-thumb{width:100px;margin-right:20px}
-  .event-title{width:140px;margin-right:30px}
+  .event-title{
+    width:140px;margin-right:30px;
+  }
   .event-date{width:135px;margin-right:20px}
   .event-address{width:120px}
 }

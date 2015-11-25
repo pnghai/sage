@@ -7,7 +7,7 @@
   .menu-item.active {
     font-weight:bold;
   }
-  p{margin-bottom:51px}
+  p + p{margin-bottom:51px}
 }
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
