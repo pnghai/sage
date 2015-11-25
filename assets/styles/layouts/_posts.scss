@@ -1,6 +1,14 @@
 .su-news-loop{
   .right-col{
-    text-align:right}
+    text-align:right
+  }
+  .su-post{
+    width: auto;
+    overflow: hidden;
+    .view-more{
+      margin-top:50px;
+    }
+  }
 }
 .single-post{
   .main {
