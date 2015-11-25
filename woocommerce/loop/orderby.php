@@ -12,8 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { ?>
-
+<?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	$count = WC()->cart->cart_contents_count;
 	?><a class="cart-contents pull-right" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php if ( $count > 0 ) echo '(' . $count . ')'; ?></a>
 
