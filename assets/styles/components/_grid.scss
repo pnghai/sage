@@ -1,8 +1,8 @@
 // Grid system
 .main {
-  @include make-sm-column($main-sm-columns);
+  @include make-md-column($main-md-columns);
   .sidebar-primary & {
-    @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+    @include make-md-column($main-md-columns - $sidebar-md-columns);
   }
   .menu-item.active {
     font-weight:bold;
@@ -10,7 +10,7 @@
   p + p{margin-bottom:51px}
 }
 .sidebar {
-  @include make-sm-column($sidebar-sm-columns);
+  @include make-md-column($sidebar-md-columns);
 }
 body:not(.home) {
   .content {

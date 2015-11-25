@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <div class="row">
-      <div class="col-md-6 col-sm-4">
+      <div class="col-md-5 col-sm-4">
         <header>
           <h1 class="text-uppercase entry-title"><?php the_title(); ?></h1>
           <div class="subtitle"><?php the_field("subtitle");?></div>
@@ -25,7 +25,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-md-6 col-sm-8">
+      <div class="col-md-7 col-sm-8">
 
           <figure class="feature-image"><?php the_post_thumbnail("full");?>
             <figcaption>
