@@ -7,7 +7,11 @@
   .menu-item.active {
     font-weight:bold;
   }
-  p + p{margin-bottom:51px}
+  .entry-content{
+    p {
+      margin-bottom: emRhythm($base-line-multi);
+    }
+  }
 }
 .sidebar {
   @include make-md-column($sidebar-md-columns);

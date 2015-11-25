@@ -1,6 +1,11 @@
 .content-wrapper{margin-top:64px;padding-left:0}
 .page-header{margin:0;padding-bottom: 0}
-p:empty{
+p{
+  margin-top: 0;
   margin-bottom: 0;
-  display:none
+  padding-top: 0;
+  padding-bottom: 0;
+  &:empty{
+    display:none
+  }
 }
