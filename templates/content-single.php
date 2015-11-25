@@ -15,9 +15,11 @@
               foreach( $categories as $category ) {
                 $artist_link = get_field("artist_page", $category);
                 if ($artist_link):
-                ?>
-                <li><a href="<?php echo $artist_link; ?>"><?php _e("Artist Info", "sage"); ?></a>
-                </li><?php
+                  $post = $artist_link;
+                  setup_postdata( $post );
+                  ?>
+                <li><a href="<?php the_permalink(); ?>"><?php _e("Artist Info", "sage"); ?></a>
+                </li><?php wp_reset_postdata();
                 endif;
               }
             }
