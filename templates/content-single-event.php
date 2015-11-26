@@ -1,5 +1,4 @@
 <?php while (have_posts()) : the_post(); ?>
-  <h3 class="text-uppercase entry-categories"><?php _e('Category','ug-2015');?> : <? the_category(', ');?></h3>
   <article <?php post_class(); ?>>
     <div class="row">
       <div class="col-md-4">
@@ -8,6 +7,7 @@
           <?php global $EM_Event, $post;
             $EM_Event = em_get_event($post->ID, 'post_id');
           ?>
+          <div class="subtitle"><?php echo $EM_Event->output("#_EVENTEXCERPT");?></div>
           <div class="datetime-range">
             <?php echo $EM_Event->output("#_EVENTDATES . #_EVENTTIMES");?>
           </div>
@@ -18,9 +18,25 @@
             <?php echo $EM_Event->output("#_LOCATIONFULLBR");?>
           </div>
         </header>
-        <section class="event-widgets">
-          <?php dynamic_sidebar('sidebar-event-single'); ?>
-        </section>
+        <div class="post-nav">
+          <ul>
+            <li><a href="<?php the_permalink();?>"><b><?php _e("About Exhibition","sage");?></b></a></li>
+            <?php $categories = get_the_terms(get_the_ID(),'event-categories');
+            if ( ! empty( $categories ) ) {
+              foreach( $categories as $category ) {
+                $artist_link = get_field("artist_page", $category);
+                if ($artist_link):
+                  $post = $artist_link;
+                  setup_postdata( $post );
+                  ?>
+                  <li><a href="<?php the_permalink(); ?>"><?php _e("Artist Info", "sage"); ?></a>
+                  </li><?php wp_reset_postdata();
+                endif;
+              }
+            }
+            ?>
+          </ul>
+        </div>
       </div>
       <div class="col-md-8">
           <div class="entry-content">
