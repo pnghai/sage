@@ -26,6 +26,7 @@
     }
   }
   &.single-event{
+    .subtitle,.datetime-range{font-weight:bold;letter-spacing: 0.1em}
     .contact-info{
       @include scut-padding(30px n);
     }
