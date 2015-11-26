@@ -10,6 +10,9 @@
         @include setType(4, $ms-up2);
       }
     }
+    .post-nav{
+      text-transform: uppercase
+    }
   }
   .comments {
     h2 {
