@@ -38,7 +38,6 @@
                 if ($link):?>
                     <li><a href="<?php echo $link;?>">ARTIST'S WEBSITE</a></li>
                 <?php endif;?>
-                o
             </ul>
         </div>
     </div>
