@@ -5,6 +5,8 @@
   font-size:14px
 }
 .past-event-item{
+  width: auto;
+  overflow: hidden;
   cursor: pointer;
   margin-bottom:15px;
   > div{float:left}
