@@ -99,8 +99,7 @@ function display_sidebar() {
     is_front_page(),
     is_page_template('template-custom.php'),
     is_page_template('template-custom-with-page-header.php'),
-    is_page_template('template-no-header-nor-footer.php'),
-    is_singular('event')
+    is_page_template('template-no-header-nor-footer.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
