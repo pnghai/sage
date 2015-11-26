@@ -11,11 +11,18 @@
           <div class="datetime-range">
             <?php echo $EM_Event->output("#_EVENTDATES . #_EVENTTIMES");?>
           </div>
-          <div class="location-name">
-            <?php echo $EM_Event->output("#_LOCATIONNAME");?>
-          </div>
-          <div class="localtion-fullbr">
-            <?php echo $EM_Event->output("#_LOCATIONFULLBR");?>
+          <div class="contact-info">
+            <div class="location-name">
+              <?php echo $EM_Event->output("#_LOCATIONNAME");?>
+            </div>
+            <div class="localtion-fullbr">
+              <?php echo $EM_Event->output("#_LOCATIONFULLBR");?>
+            </div>
+            T. <?php echo $EM_Event->output("#_CONTACTPHONE");?><br>
+            <a href="mailto:<?php echo $EM_Event->output("#_CONTACTEMAIL");?>"><?php echo $EM_Event->output("#_CONTACTEMAIL");?></a><br>
+            <?php echo $EM_Event->output("#_LOCATIONNOTES");?>
+            <a href="<?php echo get_permalink(get_page_by_title("Contact"));?>"><?php _e("Gallery Infomation","sage");?></a><br>
+            <a href="<?php echo $EM_Event->output("#_LOCATIONURL");?>"><?php _e("Gallery Map","sage");?></a><br>
           </div>
         </header>
         <div class="post-nav">

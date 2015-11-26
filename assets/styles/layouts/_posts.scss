@@ -22,17 +22,3 @@
     }
   }
 }
-.single-post{
-  .main {
-    article {
-      background: #fff;
-      @include scut-padding(20px 30px);
-      .feature-image img {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        margin-bottom: 35px;
-      }
-    }
-  }
-}
