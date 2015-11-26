@@ -77,7 +77,7 @@ class wpb_widget extends \WP_Widget
         $product_cats = implode(", ", $a);
         ?>
         <div class="shop-sidebar-slider">
-            <div id="upw-carousel" class="carousel slide" data-ride="carousel">
+            <div id="upw-carousel" class="carousel slide">
                 <!-- Controls -->
                 <a class="pull-right right carousel-control" href="#upw-carousel" role="button" data-slide="next">
                     <i class="icon-right-open-big" aria-hidden="true"></i>
