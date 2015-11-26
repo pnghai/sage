@@ -26,23 +26,7 @@
           </div>
         </header>
         <div class="post-nav">
-          <ul>
-            <li><a href="<?php the_permalink();?>"><b><?php _e("About Exhibition","sage");?></b></a></li>
-            <?php $categories = get_the_terms(get_the_ID(),'event-categories');
-            if ( ! empty( $categories ) ) {
-              foreach( $categories as $category ) {
-                $artist_link = get_field("artist_page", $category);
-                if ($artist_link):
-                  $post = $artist_link;
-                  setup_postdata( $post );
-                  ?>
-                  <li><a href="<?php the_permalink(); ?>"><?php _e("Artist Info", "sage"); ?></a>
-                  </li><?php wp_reset_postdata();
-                endif;
-              }
-            }
-            ?>
-          </ul>
+          <?php the_field("navigation_panel");?>
         </div>
       </div>
       <div class="col-md-8">

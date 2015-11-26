@@ -12,33 +12,7 @@
         $artist_id = ($parent->post_parent == $artists_page->ID)?$parent->ID:get_the_ID();
         ?>
         <div class="post-nav">
-            <ul>
-                <li><a href="<?php echo get_permalink($artist_id);?>"><?php _e("Artist Biography","sage");?></a></li>
-                <?php $link = get_field("artist_images",$artist_id);
-                if ($link):?>
-                    <li><a href="<?php echo $link; ?>">Selected Images</a></li>
-                <?php endif;?>
-                <?php $link = get_field("artist_news",$artist_id);
-                if ($link):?>
-                    <li><a href="<?php echo $link; ?>">ARTIST NEWS</a></li>
-                <?php endif;?>
-                <?php $link = get_field("artist_exhibitions_link",$artist_id);
-                if ($link):?>
-                    <li><a href="<?php echo $link; ?>">ARTIST EXHIBITIONS</a></li>
-                <?php endif;?>
-                <?php $link = get_field("artist_press",$artist_id);
-                if ($link):?>
-                    <li><a href="<?php echo $link; ?>">SELECTED PRESS</a></li>
-                <?php endif;?>
-                <?php $link = get_field("artist_related_items",$artist_id);
-                if ($link):?>
-                    <li><a href="<?php echo $link;?>">SHOP ITEMS</a></li>
-                <?php endif;?>
-                <?php $link = get_field("artist_website",$artist_id);
-                if ($link):?>
-                    <li><a href="<?php echo $link;?>">ARTIST'S WEBSITE</a></li>
-                <?php endif;?>
-            </ul>
+            <?php the_field("navigation_panel",$artist_id);?>
         </div>
     </div>
 
