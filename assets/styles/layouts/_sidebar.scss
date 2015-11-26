@@ -29,26 +29,31 @@
   }
   .shop-sidebar-slider{
     width:300px;
-    margin:0 auto;
+    margin:-35px auto 0;
     .carousel-control {
       position: relative;
       background-image:none;
       color:#000;
-      top: 50%;
-      margin-top:-1.5em;
-      bottom: initial;
       text-shadow:none;
       @include opacity(.65);
       &:hover{
         @include opacity(1);
       }
-      i {font-size: 2em}
+      i {font-size: 1em}
       &.left{
-        left:-1em;
       }
       &.right{
-        right:-1em;
       }
+    }
+    .carousel-inner>.item{
+      .entry-image{
+        @include scut-margin (10px n);
+      }
+      .entry-title{
+        font-weight: bold;
+        line-height: 1.2;
+      }
+      .entry-link{line-height:5}
     }
   }
 }

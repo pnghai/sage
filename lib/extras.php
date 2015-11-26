@@ -109,7 +109,7 @@ class wpb_widget extends \WP_Widget
                             echo $single_cat->name;
                         }?></div>
                                 <div class="entry-title"><?php the_title(); ?></div>
-                                <a href="<?php echo get_permalink($loop->post->ID) ?>"
+                                <a class="entry-link" href="<?php echo get_permalink($loop->post->ID) ?>"
                                    title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
                                     <?php _e('View Now','sage');?> ►
                                 </a>
