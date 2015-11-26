@@ -13,7 +13,7 @@
       }
     }
   }
-  .upw-posts-slider{
+  .shop-sidebar-slider{
     background-color: #fff;
     @include scut-padding(18px 19px 23px);
     .entry-title{
@@ -26,7 +26,12 @@
         font-style: italic;
       }
     }
+  }
+  .shop-sidebar-slider{
+    width:300px;
+    margin:0 auto;
     .carousel-control {
+      position: relative;
       background-image:none;
       color:#000;
       top: 50%;
@@ -42,7 +47,7 @@
         left:-1em;
       }
       &.right{
-        right:-0.85em;
+        right:-1em;
       }
     }
   }

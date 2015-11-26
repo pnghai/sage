@@ -76,8 +76,17 @@ class wpb_widget extends \WP_Widget
         }, $prod_cats);
         $product_cats = implode(", ", $a);
         ?>
-        <div class="upw-posts-slider hfeed">
+        <div class="shop-sidebar-slider">
             <div id="upw-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Controls -->
+                <a class="pull-right right carousel-control" href="#upw-carousel" role="button" data-slide="next">
+                    <i class="icon-right-open-big" aria-hidden="true"></i>
+                    <span class="sr-only"><?php _e('Next','sage');?></span>
+                </a>
+                <a class="pull-right left carousel-control" href="#upw-carousel" role="button" data-slide="prev">
+                    <i class="icon-left-open-big" aria-hidden="true"></i>
+                    <span class="sr-only"><?php _e('Previous','sage');?></span>
+                </a>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <?php $args = array('post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => $product_cats, 'orderby' => 'rand');
@@ -93,8 +102,13 @@ class wpb_widget extends \WP_Widget
                                 <figure class="entry-image">
                                     <?php if (has_post_thumbnail($loop->post->ID)) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="300px" height="300px" />'; ?>
                                 </figure>
-                                <h2 class="entry-cat"><?php the_product_category(); ?></h2>
-                                <h3 class="entry-title"><?php the_title(); ?></h3>
+                                <div class="entry-cat">
+                        <?php $product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+                        if ( $product_cats && ! is_wp_error ( $product_cats ) ) {
+                            $single_cat = array_shift($product_cats);
+                            echo $single_cat->name;
+                        }?></div>
+                                <div class="entry-title"><?php the_title(); ?></div>
                                 <a href="<?php echo get_permalink($loop->post->ID) ?>"
                                    title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
                                     <?php _e('View Now','sage');?> ►
@@ -105,16 +119,6 @@ class wpb_widget extends \WP_Widget
                     <?php endwhile; ?>
                     <?php wp_reset_query(); ?>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#upw-carousel" role="button" data-slide="prev">
-                    <i class="icon-left-open-big" aria-hidden="true"></i>
-                    <span class="sr-only"><?php _e('Previous','sage');?></span>
-                </a>
-                <a class="right carousel-control" href="#upw-carousel" role="button" data-slide="next">
-                    <i class="icon-right-open-big" aria-hidden="true"></i>
-                    <span class="sr-only"><?php _e('Next','sage');?></span>
-                </a>
             </div>
 
         </div>
