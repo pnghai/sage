@@ -13,6 +13,9 @@
     .post-nav{
       text-transform: uppercase
     }
+    .entry-content{
+      .thumbnail, .wp-caption{max-width:100%}
+    }
   }
   .comments {
     h2 {

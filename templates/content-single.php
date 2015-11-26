@@ -9,7 +9,7 @@
         </header>
         <div class="post-nav">
           <ul>
-            <li><a href="<?php the_permalink();?>"><?php _e("Press Release","sage");?></a></li>
+            <li><a href="<?php the_permalink();?>"><b><?php _e("Press Release","sage");?></b></a></li>
             <?php $categories = get_the_category();
             if ( ! empty( $categories ) ) {
               foreach( $categories as $category ) {
