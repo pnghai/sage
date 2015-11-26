@@ -70,35 +70,55 @@ class wpb_widget extends \WP_Widget
         if ($prod_cats == NULL)
             return NULL;
 
-        foreach ($prod_cats as $prod_cat):
-            $args = array('post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => $prod_cat->slug, 'orderby' => 'rand');
-            $loop = new WP_Query($args);
-            while ($loop->have_posts()) : $loop->the_post();
-                global $product; ?>
-                <li class="product">
+        $index = 0;
+        $a = array_map(function ($obj) {
+            return $obj->slug;
+        }, $prod_cats);
+        $product_cats = implode(", ", $a);
+        ?>
+        <div class="upw-posts-slider hfeed">
+            <div id="upw-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <?php $args = array('post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => $product_cats, 'orderby' => 'rand');
+                    $loop = new WP_Query($args);
+                    while ($loop->have_posts()) : $loop->the_post();
+                        $index++;
+                        global $product;
+                        global $post;//need debug on sale product
+                        ?>
+                        <article <?php post_class('item ' . (($index == 1) ? 'active' : '')); ?>>
+                            <header>
+                                <?php woocommerce_show_product_sale_flash($post, $product); ?>
+                                <figure class="entry-image">
+                                    <?php if (has_post_thumbnail($loop->post->ID)) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="300px" height="300px" />'; ?>
+                                </figure>
+                                <h2 class="entry-cat"><?php the_product_category(); ?></h2>
+                                <h3 class="entry-title"><?php the_title(); ?></h3>
+                                <a href="<?php echo get_permalink($loop->post->ID) ?>"
+                                   title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+                                    <?php _e('View Now','sage');?> ►
+                                </a>
+                            </header>
+                        </article>
 
-                    <a href="<?php echo get_permalink($loop->post->ID) ?>"
-                       title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+                    <?php endwhile; ?>
+                    <?php wp_reset_query(); ?>
+                </div>
 
-                        <?php woocommerce_show_product_sale_flash($post, $product); ?>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#upw-carousel" role="button" data-slide="prev">
+                    <i class="icon-left-open-big" aria-hidden="true"></i>
+                    <span class="sr-only"><?php _e('Previous','sage');?></span>
+                </a>
+                <a class="right carousel-control" href="#upw-carousel" role="button" data-slide="next">
+                    <i class="icon-right-open-big" aria-hidden="true"></i>
+                    <span class="sr-only"><?php _e('Next','sage');?></span>
+                </a>
+            </div>
 
-                        <?php if (has_post_thumbnail($loop->post->ID)) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="' . woocommerce_placeholder_img_src() . '" alt="Placeholder" width="300px" height="300px" />'; ?>
-
-                        <h3><?php the_title(); ?></h3>
-
-                        <span class="price"><?php echo $product->get_price_html(); ?></span>
-
-                    </a>
-
-                    <?php woocommerce_template_loop_add_to_cart($loop->post, $product); ?>
-
-                </li>
-
-            <?php endwhile; ?>
-            <?php wp_reset_query(); ?>
-            <?php
-        endforeach;
-        echo $args['after_widget'];
+        </div>
+        <?php echo $args['after_widget'];
     }
 
 // Widget Backend
@@ -177,7 +197,7 @@ class wpb_widget extends \WP_Widget
                     return array(get_field('product_category', $post->ID));
                 else:
                     $ancestors = get_post_ancestors($post->ID);
-                    if (in_array($artists_page->ID , $ancestors)):
+                    if (in_array($artists_page->ID, $ancestors)):
                         return array(get_field('product_category', $parent_id));
                     endif;
                 endif;
