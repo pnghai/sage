@@ -71,10 +71,6 @@ class wpb_widget extends \WP_Widget
             return NULL;
 
         $index = 0;
-        $a = array_map(function ($obj) {
-            return $obj->slug;
-        }, $prod_cats);
-        $product_cats = implode(", ", $a);
         ?>
         <div class="shop-sidebar-slider">
             <div id="upw-carousel" class="carousel slide">
@@ -89,7 +85,13 @@ class wpb_widget extends \WP_Widget
                 </a>
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                    <?php $args = array('post_type' => 'product', 'posts_per_page' => -1, 'product_cat' => $product_cats, 'orderby' => 'rand');
+                    <?php $args = array('post_type' => 'product', 'posts_per_page' => -1,'tax_query'     => array(
+        array(
+            'taxonomy'  => 'product_cat',
+            'field'     => 'id',
+            'terms'     => $prod_cats
+        )
+    ), 'orderby' => 'rand');
                     $loop = new WP_Query($args);
                     while ($loop->have_posts()) : $loop->the_post();
                         $index++;
