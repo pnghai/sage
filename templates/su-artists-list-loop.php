@@ -9,10 +9,11 @@ if ( $posts->have_posts() ) {
 ?>
 <div id="su-artists-<?php the_ID(); ?>" class="col-md-3 col-sm-6 su-artist">
 	<a href="<?php the_permalink(); ?>">
-		<?php if (has_post_thumbnail()): the_post_thumbnail("thumbnail"); endif;?>
+		<?php if (has_post_thumbnail()): the_post_thumbnail("thumbnail", array( 'class' => 'alignleft' )); endif;?>
 		<?php the_title(); ?>
 	</a>
 </div>
+<div class="clearfix visible-xs-block"></div>
 <?php if ($count%2==1):?><div class="clearfix visible-sm-block"></div><?php endif;?>
 <?php if ($count%4==3):?><div class="clearfix visible-md-block"></div><?php endif;?>
 <?php
