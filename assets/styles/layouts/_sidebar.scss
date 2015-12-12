@@ -48,6 +48,7 @@
     .carousel-inner>.item{
       .entry-image{
         @include scut-margin (10px n);
+        img {max-width:100%;height:auto}
       }
       .entry-cat{
         font-weight: bold;

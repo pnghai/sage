@@ -8,7 +8,7 @@ if ( $posts->have_posts() ) {
 ?>
 <div id="su-artists-<?php the_ID(); ?>" class="col-md-3 col-sm-6 su-artist">
 	<a href="<?php the_permalink(); ?>">
-		<?php if (has_thumbnail()): the_thumbnail(); endif;?>
+		<?php if (has_post_thumbnail()): the_post_thumbnail("thumbnail"); endif;?>
 		<?php the_title(); ?>
 	</a>
 </div>
