@@ -2,6 +2,7 @@
 <?php
 // Posts are found
 if ( $posts->have_posts() ) {
+	$count=0;
 	while ( $posts->have_posts() ) {
 		$posts->the_post();
 		global $post;
@@ -12,7 +13,10 @@ if ( $posts->have_posts() ) {
 		<?php the_title(); ?>
 	</a>
 </div>
+<?php if ($count%2==1):?><div class="clearfix visible-sm-block"></div><?php endif;?>
+<?php if ($count%4==3):?><div class="clearfix visible-md-block"></div><?php endif;?>
 <?php
+		$count++;
 	}
 }
 // Posts not found
