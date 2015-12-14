@@ -48,3 +48,11 @@ body.woocommerce{
   vertical-align: bottom;
 }
 .cart-contents, .cart-contents:hover {text-decoration: none}
+
+
+.rsLeftDefaultInv:not(.rsFullscreen){
+  background: transparent;
+  .rsOverflow,.rsSlide,.rsVideoFrameHolder,.rsThumbs {
+    background: transparent;
+  }
+}
