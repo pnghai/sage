@@ -2,13 +2,13 @@
   <article <?php post_class(); ?>>
     <div class="row">
       <div class="col-md-4">
-        <header class="text-uppercase">
-          <h1 class="entry-title"><?php the_title(); ?></h1>
+        <header>
+          <h1 class="entry-title text-uppercase"><?php the_title(); ?></h1>
           <?php global $EM_Event, $post;
             $EM_Event = em_get_event($post->ID, 'post_id');
           ?>
-          <div class="subtitle"><?php echo $EM_Event->output("#_EVENTEXCERPT");?></div>
-          <div class="datetime-range">
+          <div class="subtitle text-uppercase"><?php echo $EM_Event->output("#_EVENTEXCERPT");?></div>
+          <div class="datetime-range text-uppercase">
             <?php echo $EM_Event->output("#_EVENTDATES . #_EVENTTIMES");?>
           </div>
           <div class="contact-info">
